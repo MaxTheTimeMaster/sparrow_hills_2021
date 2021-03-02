@@ -1,4 +1,5 @@
-#include "stdafx.h"
+//#include "stdafx.h"
+// Нужна для компиляции в VisualStudio
 #include <iostream>
 #include <cmath>
 
@@ -25,6 +26,7 @@ public:
     Complex& operator=(const Complex& copied) {
         _real = copied._real;
         _imaginary = copied._imaginary;
+	return *this;
     }
 
     ~Complex() {
@@ -173,8 +175,6 @@ int main() {
     }
 
     cout << "Number of tests: " << tests << ", number of errors: " << errors << endl;
-
-	//system.pause(" ");
     
 
     return 0;
